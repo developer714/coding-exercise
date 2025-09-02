@@ -1,0 +1,29 @@
+name: Healthy Pull Request
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review, synchronize]
+env:
+  NODE_VERSION: 16
+jobs:
+  test:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    name: Supabase Test
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Setup Supabase CLI
+        uses: supabase/setup-cli@v1
+      - name: install
+        run: yarn --frozen-lockfile
+      - name: audit
+        run: yarn audit
+      - name: test
+        run: |
+          cp @app/tests/.env.example @app/tests/.env
+          yarn test

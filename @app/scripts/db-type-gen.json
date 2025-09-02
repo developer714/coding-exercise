@@ -1,0 +1,15 @@
+  {
+  "client": "postgres",
+  "connection": {
+    "host": "localhost",
+    "user": "postgres",
+    "port": 54322,
+    "password": "postgres",
+    "database": "postgres"
+  },
+  "schemas": ["public"],
+  "tableNameCasing": "pascal",
+  "enumNameCasing": "pascal",
+  "folder": "types",
+  "filename": "database"
+}

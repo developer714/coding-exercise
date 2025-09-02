@@ -1,0 +1,23 @@
+{
+  "name": "@app/tests",
+  "version": "1.0.0",
+  "scripts": {
+    "sql-gen": "sql-ts -c db-type-gen.json",
+    "test": "jest"
+  },
+  "resolutions": {
+    "knex": ">=2.4.0"
+  },
+  "dependencies": {
+    "@rmp135/sql-ts": "^1.12.1",
+    "@supabase/supabase-js": "^2.12.0",
+    "@types/dotenv-safe": "^8.1.2",
+    "@types/jest": "^27.4.1",
+    "@types/pg": "^8.6.5",
+    "dotenv-safe": "^8.2.0",
+    "jest": "^27.5.1",
+    "pg": "^8.7.3",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.6.2"
+  }
+}

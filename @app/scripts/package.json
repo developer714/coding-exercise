@@ -1,0 +1,19 @@
+{
+  "name": "@app/scripts",
+  "version": "1.0.0",
+  "scripts": {
+    "preseed": "sql-ts -c db-type-gen.json",
+    "seed": "ts-node seed.ts"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@rmp135/sql-ts": "^1.16.0",
+    "@supabase/supabase-js": "^2.12.0",
+    "@types/dotenv-safe": "^8.1.2",
+    "dotenv-safe": "^8.2.0",
+    "isomorphic-fetch": "^3.0.0",
+    "pg": "^8.7.3",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  }
+}
